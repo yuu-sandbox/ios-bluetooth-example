@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6F049FC823716D0100986581 /* Extension+UITextView+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F049FC723716D0100986581 /* Extension+UITextView+Log.swift */; };
+		6F1E2E2E23751B5700AA2778 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1E2E2D23751B5700AA2778 /* Charts.framework */; };
+		6F1E2E2F23751B5700AA2778 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1E2E2D23751B5700AA2778 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6FC83BD8236AC7A000B1573D /* Extension+CBManagerState+CustomString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC83BD7236AC7A000B1573D /* Extension+CBManagerState+CustomString.swift */; };
 		6FD9D70223715D050087E2AD /* PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9D70123715D050087E2AD /* PeripheralManager.swift */; };
 		6FD9D7042371603F0087E2AD /* CentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9D7032371603F0087E2AD /* CentralManager.swift */; };
@@ -22,8 +24,23 @@
 		6FF2CAA9236AAF1100109424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FF2CAA7236AAF1100109424 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6F1E2E3023751B5700AA2778 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6F1E2E2F23751B5700AA2778 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6F049FC723716D0100986581 /* Extension+UITextView+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextView+Log.swift"; sourceTree = "<group>"; };
+		6F1E2E2D23751B5700AA2778 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 		6FC83BD7236AC7A000B1573D /* Extension+CBManagerState+CustomString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CBManagerState+CustomString.swift"; sourceTree = "<group>"; };
 		6FD9D70123715D050087E2AD /* PeripheralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralManager.swift; sourceTree = "<group>"; };
 		6FD9D7032371603F0087E2AD /* CentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralManager.swift; sourceTree = "<group>"; };
@@ -45,17 +62,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F1E2E2E23751B5700AA2778 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F1E2E2C23751B5700AA2778 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F1E2E2D23751B5700AA2778 /* Charts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6FF2CA8D236AAF1100109424 = {
 			isa = PBXGroup;
 			children = (
 				6FF2CA98236AAF1100109424 /* Bluetooth-example */,
 				6FF2CA97236AAF1100109424 /* Products */,
+				6F1E2E2C23751B5700AA2778 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +125,7 @@
 				6FF2CA92236AAF1100109424 /* Sources */,
 				6FF2CA93236AAF1100109424 /* Frameworks */,
 				6FF2CA94236AAF1100109424 /* Resources */,
+				6F1E2E3023751B5700AA2778 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,6 +342,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CN9G6GDH5K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Bluetooth-example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -332,6 +364,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CN9G6GDH5K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Bluetooth-example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
